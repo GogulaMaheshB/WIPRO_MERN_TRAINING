@@ -1,0 +1,216 @@
+HTML (HyperText Markup Language) is the standard language used to create webpages. 
+It defines the structure, layout, and elements that make up a website — 
+such as text, images, links, videos, and forms.
+Let’s break the term down:
+	• HyperText: Refers to text that contains links (called hyperlinks) to other web pages. These links connect different pages and make website navigation possible.
+Example: <a href="about.html">About Us</a> connects one page to another.
+
+	• Markup Language: Means using tags to “mark up” content so that browsers 
+    know how to display it.
+Example: <h1> for headings, <p> for paragraphs, <img> for images.
+Together, HTML tells the browser what to display, while CSS tells it how to display it 
+(style, color, layout), and JavaScript adds interactivity.
+Analogy:
+If a website were a human body —
+	• HTML is the skeleton (structure)
+	• CSS is the skin and clothing (style)
+	• JavaScript is the brain and muscles (behavior)
+Note: HTML is the backbone of every website — it defines what appears on the page and how the content is arranged.
+
+Why Do We Need HTML and What Is Its Importance?
+We need HTML because it is the foundation of web development. Without it, browsers would not understand how to structure or display content.
+Importance of HTML
+Concept	Description
+Basic Building Block	HTML is the starting point for all websites. Every web page you see — from Google to YouTube — is built with HTML.
+Defines Structure	It organizes content using tags like <header>, <section>, <article>, <footer>, etc.
+Supports Multimedia	HTML supports embedding images, videos, audio, and interactive elements (like <video>, <audio>, <canvas>).
+Works with CSS & JavaScript	HTML handles structure, CSS handles design, and JavaScript handles interactivity — the three pillars of front-end development.
+Universally Supported	Every modern browser (Chrome, Firefox, Safari, Edge) understands HTML, making it the universal web language.
+SEO & Accessibility	Proper HTML structure improves SEO (search ranking) and accessibility for screen readers and users with disabilities.
+
+Basic Structure of HTML
+Copy
+​<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Title</title>
+</head>
+<body>
+  <!-- Page Content Goes Here -->
+</body>
+</html>
+​!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Webpage</title>
+  </head>
+  <body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph of text.</p>
+  </body>
+</html>
+Breakdown:
+	• <!DOCTYPE html> → Defines HTML5 document.
+	• <html lang="en"> → Root element with language attribute.
+	• <head> → Metadata (title, character set, viewport).
+<body> → Visible content of the webpage.
+
+Common Elements Inside <head>
+	1. <title> – Page Title
+	2. <meta> – Metadata for SEO & Settings
+	3. <link> – Linking External Resources
+	4. <style> – Internal CSS
+	5. <script> – JavaScript (Optional in <head>)
+	6. <base> – Base URL for Relative Links
+Why is the <head> Section Important?
+	• Provides SEO-friendly metadata
+	• Ensures proper rendering on all devices
+	• Helps browsers load external stylesheets, fonts, and icons
+	• Improves performance with preload, preconnect, and caching instructions
+
+Common HTML Text Formatting Tags:
+	• <b>: Bold text
+	• <i>: Italic text
+	• <u>: Underlined text
+	• <strong>: Strong importance
+	• <em>: Emphasized text
+	• <small>: Smaller text
+	• <mark>: Highlighted text
+	• <sub> / <sup>: Subscript / Superscript
+Formatting is done using two types of tags:
+1. Physical (Presentational) Tags
+2. Logical (Semantic) Tags
+
+ Physical Tags (Presentational Tags)
+	• Used only for visual style
+	• They don’t give any extra meaning. (non-semantic)
+	• Example: <b>, <i>, <u>, <small>, <sup>, <sub>
+<b> – Bold Text
+	• Makes text bold (only for styling, no extra meaning).
+Example:
+
+<p>This is <b>bold</b><i><small> text</small></i>.</p>
+
+Logical Tags (Semantic Tags)
+Tags that give meaning + style to text 
+(important, emphasized, highlighted, deleted, inserted, etc.).
+They are useful for SEO, accessibility, and screen readers.
+Example: <strong>, <em>, <mark>, <del>, <ins>
+<strong> – Important Text
+	• Also makes text bold, but with semantic meaning (used for important text).
+	• Screen readers read it with emphasis.
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1> My HTML PAGE </h1>  
+  <h2> My HTML PAGE </h2> 
+  <h3> My HTML PAGE </h3> 
+  <h4> My HTML PAGE </h4> 
+  <h5> My HTML PAGE </h5> 
+  <h6> My HTML PAGE </h6> 
+  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Vero aperiam expedita fugiat quas pariatur modi quo necessitatibus corrupti voluptatum.
+     Asperiores explicabo iste tenetur. Voluptates officia necessitatibus iste quam aliquid 
+     corporis?</p>
+     <a href ="https://www.google.com/?zx=1768372184055&no_sw_cr=1"> Visit here</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Complete guide to HTML head section with examples.">
+  <meta name="keywords" content="HTML head, HTML SEO, HTML metadata, HTML tutorial">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Head Section - Explained with Examples</title>
+<link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+    body { margin: 0; font-family: Arial;font-size: large; color: brown; background-color:cyan;}
+  </style>
+<script src="app.js" defer></script>
+</head>
+<body>
+    <header><img src=""> </header>
+  <h1>Welcome to HTML Tutorial</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- Block-level Container
+Both <div> and <span> are container elements, but they are used differently.
+<div> (Block-level Container)
+	• Stands for Division.
+	• A block-level element → always starts on a new line.
+	• Used to group larger sections of HTML (like paragraphs, images, forms).
+	• Commonly used with CSS for layout and styling.
+Example: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div style="background: lightblue; padding: 50px;">
+  <h2>About Me</h2>
+  <p>Hello, I am a web developer.</p>
+</div> 
+<h1>Physical Tags</h1> 
+<p>H<sub>2</sub>O = Water</p>
+<p>2<sup>3</sup> = 8</p>
+<p>This is <small>small</small> text.</p>
+<p>This is <u>underlined</u> text.</p>
+<p>This is <i>italic</i> text.</p>
+<p>This is <b>bold</b> text.</p>
+
+<hr>
+<p>My favorite color is <span style="color: red;">Red</span>.</p>
+<hr>
+<h1> Logical Tags</h1>
+<p>This is <strong>very important</strong> text.</p>
+<p>Please <em>read carefully</em> before you start.</p>
+<p>This is <mark>highlighted</mark> text.</p>
+<p>Price: <del>$100</del> $80</p>
+<p>My favorite color is <ins>blue</ins>.</p>
+
+</body>
+</html>
+
+<!-- <span> (Inline Container)
+	• An inline element → does not start on a new line.
+	• Used to style or group small pieces of text inside other elements.
+	• Best for applying CSS styles to part of a sentence.
+Example: -->
+
+

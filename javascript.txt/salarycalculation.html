@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Employee Salary Calculator</h2>
+
+    <label>Working Days:</label>
+    <input type="number" id="days" placeholder="Enter working days">
+
+    <label>Basic Salary:</label>
+    <input type="number" id="basic" placeholder="Enter basic salary">
+
+    <button onclick="calculateSalary()">Calculate Salary</button>
+
+    <div class="result">
+        <p>Gross Salary: ₹ <span id="gross">0</span></p>
+        <p>Tax Deduction: ₹ <span id="tax">0</span></p>
+        <p><strong>Net Salary: ₹ <span id="net">0</span></strong></p>
+    </div>
+</div>
+
+<script src="salary.js"></script>
+</body>
+</html>
