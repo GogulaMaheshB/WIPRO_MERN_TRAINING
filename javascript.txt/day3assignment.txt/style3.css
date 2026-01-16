@@ -1,0 +1,134 @@
+/* FULL PAGE */
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4c38b;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8a75d;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 8px 14px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+/* PAGES */
+.page {
+    display: none;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* DEFAULT PAGE */
+#welcome {
+    display: block;
+}
+
+/* TARGET PAGE */
+.page:target {
+    display: block;
+}
+
+/* PROFILE */
+.profile-card {
+    margin-top: 30px;
+    background-color: #fff3d6;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* TABLE */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+
+th, td {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+/* First row (header) */
+thead tr {
+  background-color: #e8e5e5;
+}
+
+/* Odd rows (excluding header) */
+tbody tr:nth-child(odd) {
+  background-color: azure;
+}
+tbody tr:nth-child(odd):hover {
+  background-color: rgb(31, 197, 197);
+}
+
+/* Even rows (excluding header) */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover only on even rows */
+tbody tr:nth-child(even):hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+    }
+}

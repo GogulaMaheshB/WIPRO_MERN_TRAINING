@@ -8,15 +8,18 @@
 <body>
     <h1 id="welcome">Hello UserName !</h1>
 
-    <button id ="changeText" > Change the HTML Content</button>
+    <button id ="changeText" onclick="welcome()"> Change the HTML Content</button>
     <script>
+            function welcome(){
+                document.getElementById("welcome").innerHTML="We have changed the Text";
+            }
+            
+            // const button = document.getElementById("changeText");
 
-            const button = document.getElementById("changeText");
-
-            button.addEventListener("click" ,function()
-            {
-                    document.getElementById("welcome").innerHTML = " we have changed the Text";
-            } );
+            // button.addEventListener("click" ,function()
+            // {
+            //         document.getElementById("welcome").innerHTML = " we have changed the Text";
+            // } );
     </script>
 
     <!-- DOM -- Document Object Model --  which is used to change the html data dynamically

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <script>
+                const shop = [            //// p arrow function will take each product p from an array and return a new object 
+  // ...(spread) means- it will copy all properties of the original product and apply discount on it
+                { biscuits: 100 },
+                { lays: 90 },
+                { sprite: 40 }
+                ];
+
+                // map() → extract prices and apply 10% discount
+                const discountedPrices = shop.map(item => {
+                const price = Object.values(item)[0];
+                return price - price * 0.10;
+                });
+                document.writeln("Prices after 10% discount : " + discountedPrices + "<br><br>");
+
+                // filter() → prices greater than 2000
+                const filteredPrices = discountedPrices.filter(price => price > 2000);
+                document.writeln("Prices greater than 2000 : " + filteredPrices + "<br><br>");
+
+                // reduce() → total accumulated price
+                const totalPrice = discountedPrices.reduce((sum, price) => sum + price, 0);
+                document.writeln("Total accumulated price : " + totalPrice);
+</script>
+
+
+   
+</body>
+</html>

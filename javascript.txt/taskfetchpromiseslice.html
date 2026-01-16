@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Todos</title>
+</head>
+<body>
+
+<h2>Todos using Fetch API</h2>
+<ul id="todoList"></ul>
+
+<script>
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then(response => response.json())   // convert JSON
+  .then(todos => {
+    const list = document.getElementById("todoList");
+
+    todos.slice(0, 5).forEach(todo => {   // first 5 items
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <b>User ID:</b> ${todo.userId} <br>
+        <b>Task:</b> ${todo.title} <br>
+        <b>Completed:</b> ${todo.completed}
+        <hr>
+      `;
+      list.appendChild(li);
+    });
+  })
+  .catch(error => console.log("Error:", error));
+</script>
+
+</body>
+</html>

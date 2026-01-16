@@ -1,0 +1,48 @@
+/* FULL PAGE BACKGROUND */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f4c38b;   /* Full page background */
+    font-family: Arial, sans-serif;
+}
+
+/* MENU BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8a75d;
+    padding: 15px 30px;
+}
+
+/* LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* MENU */
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 8px 14px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* CONTENT */
+.content {
+    text-align: center;
+    padding: 50px;
+}
+.page{
+    display: none;
+}

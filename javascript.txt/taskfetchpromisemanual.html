@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch with Manual Promise</title>
+</head>
+<body>
+
+<h2>Fetch inside Promise</h2>
+<ul id="result"></ul>
+
+<script>
+const myPromise = new Promise((resolve, reject) => {
+
+  fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(response => {
+      if (!response.ok) {
+        reject("Failed to fetch data");
+      }
+      return response.json();
+    })
+    .then(data => {
+      resolve(data);   // Promise resolved
+    })
+    .catch(error => {
+      reject(error);   // Promise rejected
+    });
+
+});
+
+myPromise
+  .then(todos => {
+    const ul = document.getElementById("result");
+
+    todos.slice(0, 5).forEach(todo => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <b>User ID:</b> ${todo.userId} <br>
+        <b>Task:</b> ${todo.title} <br>
+        <b>Completed:</b> ${todo.completed}
+        <hr>
+      `;
+      ul.appendChild(li);
+    });
+  })
+  .catch(error => {
+    console.log("Error:", error);
+  });
+</script>
+
+</body>
+</html>
