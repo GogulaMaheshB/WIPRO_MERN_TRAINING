@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Management</title>
+<style>
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+button {
+  margin: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Product Management</h2>
+
+<ul id="productList"></ul>
+
+<button onclick="fetchProducts()">Fetch Products</button>
+<button onclick="addProduct()">Add Product</button>
+<button onclick="updateProduct()">Update Product</button>
+<button onclick="deleteProduct()">Delete Product</button>
+
+<script>
+
+let products = [
+  { item: "Laptop", price: 60000 },
+  { item: "Mouse", price: 500 },
+  { item: "Keyboard", price: 700 },
+  { item: "Speaker", price: 5000 }
+];
+
+const ul = document.getElementById("productList");
+
+
+function fetchProducts() {
+  ul.innerHTML = "";
+  products.forEach((p, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${index} → ${p.item} - ₹${p.price}`;
+    ul.appendChild(li);
+  });
+}
+
+
+function addProduct() {
+  const item = prompt("Enter product name");
+  const price = prompt("Enter product price");
+
+  products.push({ item, price });
+  alert("Product Added");
+  fetchProducts();
+}
+
+function updateProduct() {
+  const index = prompt("Enter product index to update");
+  const newItem = prompt("Enter new product name");
+  const newPrice = prompt("Enter new price");
+
+  if (products[index]) {
+    products[index].item = newItem;
+    products[index].price = newPrice;
+    alert("Product Updated");
+    fetchProducts();
+  } else {
+    alert("Invalid Index");
+  }
+}
+
+
+function deleteProduct() {
+  const index = prompt("Enter product index to delete");
+
+  if (products[index]) {
+    products.splice(index, 1);
+    alert("Product Deleted");
+    fetchProducts();
+  } else {
+    alert("Invalid Index");
+  }
+}
+</script>
+
+</body>
+</html>
