@@ -42,7 +42,7 @@ class ContactManager {
     }
 }
 
-// Testing
+
 const manager = new ContactManager();
 
 manager.addContact({

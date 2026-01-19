@@ -29,7 +29,6 @@ var ContactManager = /** @class */ (function () {
     };
     return ContactManager;
 }());
-// Testing
 var manager = new ContactManager();
 manager.addContact({
     id: 1,
