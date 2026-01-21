@@ -4,6 +4,7 @@ import Header from './Component/Header'
 import Card from './Component/Card'
 import Footer from './Component/Footer'
 import Navbar from './Component/Navbar'
+import Courses from './Component/Courses'
 
 function App() {
   const [count, setCount]=useState(0)
@@ -13,6 +14,7 @@ function App() {
       <div>
         <Navbar/>
         <Header />
+        <Courses/>
         <h3>Hi , This is the app content.</h3>
         <p> React app content can be added here.</p>
         <div className='flex flex-wrap'>
