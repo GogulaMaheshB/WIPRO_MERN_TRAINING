@@ -1,0 +1,58 @@
+{
+  "foods": [
+    {
+      "name": "Chicken Biryani",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBiaXJ5YW5pfGVufDB8fDB8fHww",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Chilli Chicken",
+      "price": 250,
+      "image": "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 3,
+      "name": "Veg Biryani",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1697155406055-2db32d47ca07?w=600&auto=format&fit=crop&q=60"
+    },
+    {
+      "id": 4,
+      "name": "Hyderabadi Biryani",
+      "price": 220,
+      "image": "https://images.unsplash.com/photo-1697155406055-2db32d47ca07?w=600&auto=format&fit=crop&q=60"
+    },
+    {
+      "id": 5,
+      "name": "Egg Biryani",
+      "price": 160,
+      "image": "https://images.unsplash.com/photo-1629180052394-bedb0e4445fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZWdnJTIwZnJ5fGVufDB8fDB8fHww"
+    },
+    {
+      "id": 6,
+      "name": "Paneer Biryani",
+      "price": 190,
+      "image": "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 7,
+      "name": "Chicken fry",
+      "price": 250,
+      "image": "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 8,
+      "name": "Keema Biryani",
+      "price": 260,
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBiaXJ5YW5pfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 9,
+      "name": "Boneless Chicken Biryani",
+      "price": 240,
+      "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=60"
+    }
+  ]
+}
