@@ -1,0 +1,76 @@
+{
+  "foods": [
+    {
+      "name": "Chicken Biryani",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBiaXJ5YW5pfGVufDB8fDB8fHww",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Chilli Chicken",
+      "price": 250,
+      "image": "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 3,
+      "name": "Veg Biryani",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1697155406055-2db32d47ca07?w=600&auto=format&fit=crop&q=60"
+    },
+    {
+      "id": 4,
+      "name": "Hyderabadi Biryani",
+      "price": 220,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/11/13/6e4fbf54-fd7f-48c0-97ba-f46e27ed5853_c054b482-581f-468f-9800-38402f10fb78.jpg_compressed"
+    },
+    {
+      "id": 5,
+      "name": "Egg Biryani",
+      "price": 160,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/grqh1zb1kv8uhkmyercb"
+    },
+    {
+      "id": 6,
+      "name": "Paneer Biryani",
+      "price": 190,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/06a2fb6498faa5ae5f8a1d7761ec9449"
+    },
+    {
+      "id": 7,
+      "name": "Chicken fry",
+      "price": 250,
+      "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      "id": 8,
+      "name": "Keema Biryani",
+      "price": 260,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/7/8/e07aa80b-2fe1-4de1-ac39-9545fa1cf133_cb84ad9c-85d9-4271-86db-a665eb903651.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Boneless Chicken Biryani",
+      "price": 240,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/uox59d9haqkwyisz3psa"
+    },
+    {
+      "name": "Mutton Biryani",
+      "price": 250,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/12/16/b0d53009-6453-4e3b-8608-ddf4725e970b_a6348c8e-d966-4a64-8fae-9594cf9f47d4.jpg_compressed",
+      "id": 10
+    },
+    {
+      "name": "Prawn Biryani",
+      "price": 260,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/11/21/f7b0f0d2-ac18-453e-acb6-71fcec37a672_daf6f691-2bfe-487a-a0f2-3a10e484d4c4.jpg",
+      "id": 11
+    },
+    {
+      "name": "Chicken Mandi",
+      "price": 230,
+      "image": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/4/22/a7575925-69a4-4909-9607-a97d13ffa69d_775106f8-c788-47ff-bae9-1ef0165acace.jpeg",
+      "id": 12
+    }
+  ]
+}
