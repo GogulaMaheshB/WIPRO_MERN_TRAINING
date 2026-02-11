@@ -1,0 +1,7 @@
+1. Created BookVerseDB database.
+2. Created authors, books, and users collections.
+3. Inserted sample data.
+4. Implemented references (authorId) and embedded documents (ratings).
+5. Performed CRUD operations.
+6. Executed query and filter operations.
+7. Verified outputs using MongoDB Shell and Compass.

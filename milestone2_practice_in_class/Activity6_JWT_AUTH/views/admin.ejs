@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #2c3e50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Product</th>
+    <th>Category</th>
+    <th>Price</th>
+  </tr>
+
+  <% products.forEach(product => { %>
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.category %></td>
+      <td><%= product.price %></td>
+    </tr>
+  <% }) %>
+</table>
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>

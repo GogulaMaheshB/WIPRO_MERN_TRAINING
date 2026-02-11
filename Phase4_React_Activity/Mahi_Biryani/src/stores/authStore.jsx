@@ -1,4 +1,4 @@
-let isAdmin = !!localStorage.getItem("admin");
+let isAdmin = false;
 const listeners = [];
 
 const AuthStore = {
@@ -12,20 +12,22 @@ const AuthStore = {
 
   login(user, pass) {
     if (user === "MaheshBabu" && pass === "MaheshBabu@1437") {
-      localStorage.setItem("admin", "true");
       isAdmin = true;
+      localStorage.setItem("admin", "true");
       this.notify();
+      return true;
     }
+    return false;
   },
 
   logout() {
-    localStorage.removeItem("admin");
     isAdmin = false;
+    localStorage.removeItem("admin");
     this.notify();
   },
 
   isAuthenticated() {
-    return isAdmin;
+    return isAdmin || !!localStorage.getItem("admin");
   }
 };
 

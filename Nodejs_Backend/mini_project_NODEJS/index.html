@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="Healthcheck()">Health Check</button>
+    <button onclick="LoginUser()">Login User</button>
+    <button onclick="ViewUsers()">View Users</button>
+    <p id="result"></p>
+    <script>
+        function Healthcheck() {
+            fetch("http://localhost:3000/health")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("result").innerText = data;
+                })
+                .catch(() => {
+                    document.getElementById("result").innerText =
+                        "Error in connecting with server";
+                });
+        }
+
+        function LoginUser() {
+            fetch("http://localhost:3000/login")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("result").innerText = data;
+                });
+        }
+        function ViewUsers() {
+            fetch("http://localhost:3000/users")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("result").innerText = data;
+                });
+        }
+
+    </script>
+</body>
+
+</html>

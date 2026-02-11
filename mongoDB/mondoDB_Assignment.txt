@@ -1,0 +1,107 @@
+MONGODB SCHEMA 
+
+
+
+1. PRODUCT CATALOG
+
+
+db.products.insertMany([
+  {
+    productId: "P1001",
+    name: "Apple iPhone 15",
+    category: "Electronics",
+    price: 79999,
+    stock: 120,
+    attributes: {
+      color: "Black",
+      storage: "128GB",
+      warranty: "1 Year"
+    }
+  },
+  {
+    productId: "P1002",
+    name: "Men Cotton T-Shirt",
+    category: "Fashion",
+    price: 799,
+    stock: 500,
+    attributes: {
+      size: ["S", "M", "L", "XL"],
+      material: "Cotton",
+      color: "Blue"
+    }
+  }
+]);
+
+
+
+2. CUSTOMER ORDERS
+
+
+
+db.orders.insertOne({
+  orderId: "O5001",
+  userId: "U101",
+  orderDate: "2026-02-01",
+  products: [
+    {
+      productId: "P1001",
+      productName: "Apple iPhone 15",
+      quantity: 1,
+      price: 79999
+    },
+    {
+      productId: "P1002",
+      productName: "Men Cotton T-Shirt",
+      quantity: 2,
+      price: 799
+    }
+  ],
+  totalAmount: 81597,
+  paymentMode: "UPI",
+  orderStatus: "Delivered"
+});
+
+
+3. USER AUTHENTICATION
+
+
+db.users.insertOne({
+  userId: "U101",
+  username: "mahesh_123",
+  email: "mahesh@gmail.com",
+  passwordHash: "hashed_password_here",
+  createdAt: "2025-12-10"
+});
+
+
+
+4. INDEXING STRATEGY & SAMPLE QUERIES
+
+Indexes improve query performance.
+
+db.products.createIndex({ category: 1 });
+db.products.createIndex({ price: 1 });
+
+db.orders.createIndex({ userId: 1 });
+db.orders.createIndex({ orderDate: -1 });
+
+db.users.createIndex({ email: 1 }, { unique: true });
+db.users.createIndex({ username: 1 }, { unique: true });
+
+
+
+
+
+Retrieve products by category:
+db.products.find({ category: "Electronics" });
+
+Find orders for a specific user:
+db.orders.find({ userId: "U101" });
+
+Retrieve recent orders:
+db.orders.find().sort({ orderDate: -1 });
+
+User login query:
+db.users.findOne({ email: "mahesh@gmail.com" });
+
+

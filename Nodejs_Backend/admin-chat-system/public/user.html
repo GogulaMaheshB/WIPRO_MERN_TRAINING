@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>User View</h2>
+  <ul id="list"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io({
+      auth: { role: "user" }
+    });
+
+    socket.on("broadcast", data => {
+      const li = document.createElement("li");
+
+      if (data.type === "message") {
+        li.innerText = "Admin: " + data.text;
+      }
+
+      if (data.type === "file") {
+        li.innerText = "Admin uploaded: " + data.name;
+      }
+
+      document.getElementById("list").appendChild(li);
+    });
+  </script>
+</body>
+</html>

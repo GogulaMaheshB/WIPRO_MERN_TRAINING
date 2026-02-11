@@ -1,0 +1,16 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "description": "A guide to building good habits and breaking bad ones."
+    },
+    {
+      "id": 2,
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "description": "Rules for focused success in a distracted world."
+    }
+  ]
+}

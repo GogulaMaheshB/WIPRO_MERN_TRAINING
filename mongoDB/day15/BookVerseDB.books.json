@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "698227aa2c69aec12cdfeeef"
+  },
+  "title": "Harry Potter",
+  "genre": "Fantasy",
+  "publicationYear": 2018,
+  "authorId": {
+    "$oid": "65b3f1e9c9a8a9d4c6e7a111"
+  },
+  "ratings": [
+    {
+      "user": "Mahesh",
+      "score": 5,
+      "comment": "Excellent book"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "698227aa2c69aec12cdfeef0"
+  },
+  "title": "Foundation",
+  "genre": "Science Fiction",
+  "publicationYear": 2020,
+  "authorId": {
+    "$oid": "65b3f1e9c9a8a9d4c6e7a222"
+  },
+  "ratings": []
+},
+{
+  "_id": {
+    "$oid": "698227aa2c69aec12cdfeef1"
+  },
+  "title": "I, Robot",
+  "genre": "Science Fiction",
+  "publicationYear": 2014,
+  "authorId": {
+    "$oid": "65b3f1e9c9a8a9d4c6e7a222"
+  },
+  "ratings": []
+},
+{
+  "_id": {
+    "$oid": "698227aa2c69aec12cdfeef2"
+  },
+  "title": "Game of Thrones",
+  "genre": "Fantasy",
+  "publicationYear": 2019,
+  "authorId": {
+    "$oid": "65b3f1e9c9a8a9d4c6e7a333"
+  },
+  "ratings": [
+    {
+      "user": "Anita",
+      "score": 5,
+      "comment": "Great fantasy novel"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "698227aa2c69aec12cdfeef3"
+  },
+  "title": "Clash of Kings",
+  "genre": "Fantasy",
+  "publicationYear": 2017,
+  "authorId": {
+    "$oid": "65b3f1e9c9a8a9d4c6e7a333"
+  },
+  "ratings": []
+},
+{
+  "_id": {
+    "$oid": "69822aab2c69aec12cdfeef5"
+  },
+  "title": "Dune",
+  "genre": "Science Fiction",
+  "publicationYear": 2021,
+  "authorId": {
+    "$oid": "65c1a9f3b2e4a9c8d7f61234"
+  },
+  "ratings": []
+}]

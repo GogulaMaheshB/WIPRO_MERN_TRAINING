@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
+import AuthStore from "../stores/authStore";
 
 const API = "http://localhost:3000/foods";
 
 function Admin() {
   const [foods, setFoods] = useState([]);
   const [editItem, setEditItem] = useState(null);
+  const navigate = useNavigate();
 
   // ======================
   // FETCH FOODS (GET)
@@ -19,7 +22,22 @@ function Admin() {
 
   useEffect(() => {
     fetchFoods();
+
+    // 🔐 IMPORTANT:
+    // When admin page unmounts (back button / route change),
+    // force logout so login is required again
+    return () => {
+      AuthStore.logout();
+    };
   }, []);
+
+  // ======================
+  // LOGOUT
+  // ======================
+  const handleLogout = () => {
+    AuthStore.logout();
+    navigate("/admin-login", { replace: true });
+  };
 
   // ======================
   // ADD / UPDATE (POST, PUT)
@@ -53,9 +71,20 @@ function Admin() {
 
   return (
     <div className="min-h-screen bg-amber-200 p-6">
-      <h1 className="text-3xl font-bold text-center text-orange-700 mb-8">
-        Admin Panel
-      </h1>
+      
+      {/* HEADER */}
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold text-orange-700">
+          Admin Panel
+        </h1>
+
+        <button
+          onClick={handleLogout}
+          className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+        >
+          Logout
+        </button>
+      </div>
 
       {/* ======================
           FORM (Formik + Yup)
@@ -122,15 +151,21 @@ function Admin() {
             </div>
 
             <button
-              type="submit"
-              className={`w-full py-2 text-white rounded ${
-                editItem
-                  ? "bg-blue-600 hover:bg-blue-700"
-                  : "bg-orange-600 hover:bg-orange-700"
-              }`}
-            >
-              {editItem ? "Update Food" : "Add Food"}
-            </button>
+  type="button"
+  onClick={() => setEditItem(food)}
+  className="bg-blue-500 text-white px-3 py-1 rounded"
+>
+  Edit
+</button>
+
+<button
+  type="button"
+  onClick={() => deleteFood(food.id)}
+  className="bg-red-500 text-white px-3 py-1 rounded"
+>
+  Delete
+</button>
+
           </Form>
         </Formik>
       </div>
@@ -145,9 +180,11 @@ function Admin() {
             className="bg-white p-4 rounded shadow flex justify-between items-center"
           >
             <img
-            src={food.image}
-            className="w-24 h-20 object-cover rounded"
-          />
+              src={food.image}
+              alt={food.name}
+              className="w-24 h-20 object-cover rounded"
+            />
+
             <div>
               <p className="font-semibold">{food.name}</p>
               <p className="text-gray-600">₹{food.price}</p>

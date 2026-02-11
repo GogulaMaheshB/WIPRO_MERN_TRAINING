@@ -1,9 +1,10 @@
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import AuthStore from "../stores/authStore";
 
 function AdminLogin() {
-  const nav = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <Formik
@@ -13,16 +14,18 @@ function AdminLogin() {
         pass: Yup.string().required(),
       })}
       onSubmit={(v) => {
-        if (v.user === "MaheshBabu" && v.pass === "MaheshBabu@1437") {
-          localStorage.setItem("admin", "true");
-          nav("/admin");
+        const ok = AuthStore.login(v.user, v.pass);
+        if (ok) {
+          navigate("/admin", { replace: true });
+        } else {
+          alert("Invalid credentials");
         }
       }}
     >
       <Form className="max-w-sm mx-auto mt-20 bg-white p-6 rounded">
-        <Field name="user" placeholder="Username" className="input mb-2 border-1" />
-        <Field name="pass" type="password" placeholder="Password" className="input border-1 mt-3" />
-        <button className="bg-orange-600 w-full text-white mt-4 py-2 rounded">
+        <Field name="user" placeholder="Username" className="input mb-3" />
+        <Field name="pass" type="password" placeholder="Password" className="input mb-3" />
+        <button className="bg-orange-600 w-full text-white py-2 rounded">
           Login
         </button>
       </Form>
