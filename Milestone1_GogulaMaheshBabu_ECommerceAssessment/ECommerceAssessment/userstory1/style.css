@@ -1,0 +1,58 @@
+/* Background */
+body {
+  background: linear-gradient(135deg, #ffdd00, #ff9f1c);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.category-nav {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.category-nav .nav-link {
+  color: white;
+  font-weight: 500;
+}
+
+.category-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Product Cards */
+.product-card {
+  border-radius: 16px;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Price */
+.price {
+  color: #ff7a00;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Newsletter */
+.newsletter-form {
+  max-width: 420px;
+  margin: auto;
+}
+
+/* Footer */
+.footer {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+}
