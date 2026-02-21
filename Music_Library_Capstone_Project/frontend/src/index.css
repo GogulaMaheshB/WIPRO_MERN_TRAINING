@@ -1,0 +1,51 @@
+@media (max-width: 768px) {
+  /* HOME */
+  .language-section {
+    padding: 20px;
+  }
+
+  .song-card {
+    min-width: 140px;
+  }
+
+  /* PLAYLIST */
+  .playlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-playlist {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* SONG DETAILS */
+  .song-detail-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* MINI PLAYER */
+  .mini-player {
+    flex-wrap: wrap;
+  }
+
+  .mini-player audio {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .btn-login,
+  .btn-register {
+    width: 100%;
+  }
+
+  .song-row img {
+    width: 45px;
+    height: 45px;
+  }
+}
